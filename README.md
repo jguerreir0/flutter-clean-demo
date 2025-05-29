@@ -118,10 +118,10 @@ flutter test
 
 This project was built as a technical showcase and reflects:
 
--Clean and testable architecture
--Separation of concerns and logic isolation
--Scalable dependency injection
--State management with BLoC
--Custom route transitions (fade)
--Lottie animations integrated into the auth flow
--Readable and maintainable codebase
+✅ Clean and testable architecture
+✅ Separation of concerns and logic isolation
+✅ Scalable dependency injection
+✅ State management with BLoC
+✅ Custom route transitions (fade)
+✅ Lottie animations integrated into the auth flow
+✅ Readable and maintainable codebase
