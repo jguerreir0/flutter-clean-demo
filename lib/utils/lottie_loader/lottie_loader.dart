@@ -12,7 +12,8 @@ class LottieLoader extends StatelessWidget {
 
   /// Factory for splash screen
   factory LottieLoader.splash(
-          {required Function(LottieComposition)? onLoaded, required AnimationController controller}) =>
+          {required Function(LottieComposition)? onLoaded,
+          required AnimationController controller}) =>
       LottieLoader._(
         lottiePath: 'assets/animations/splash.json',
         controller: controller,
@@ -23,7 +24,8 @@ class LottieLoader extends StatelessWidget {
 
   /// Factory for login button loader
   factory LottieLoader.login(
-      {required Function(LottieComposition)? onLoaded, required AnimationController controller}) {
+      {required Function(LottieComposition)? onLoaded,
+      required AnimationController controller}) {
     return LottieLoader._(
       lottiePath: 'assets/animations/loading.json',
       controller: controller,

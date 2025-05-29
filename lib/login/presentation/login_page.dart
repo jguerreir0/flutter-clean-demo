@@ -31,7 +31,8 @@ class LoginForm extends StatefulWidget {
   State<LoginForm> createState() => _LoginFormState();
 }
 
-class _LoginFormState extends State<LoginForm> with SingleTickerProviderStateMixin {
+class _LoginFormState extends State<LoginForm>
+    with SingleTickerProviderStateMixin {
   final _formKey = GlobalKey<FormState>();
   final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
@@ -96,7 +97,8 @@ class _LoginFormState extends State<LoginForm> with SingleTickerProviderStateMix
                     labelText: 'Username',
                     border: OutlineInputBorder(),
                   ),
-                  validator: (value) => value == null || value.isEmpty ? 'Enter username' : null,
+                  validator: (value) =>
+                      value == null || value.isEmpty ? 'Enter username' : null,
                 ),
                 const SizedBox(height: 16),
                 TextFormField(
@@ -106,13 +108,15 @@ class _LoginFormState extends State<LoginForm> with SingleTickerProviderStateMix
                     border: OutlineInputBorder(),
                   ),
                   obscureText: true,
-                  validator: (value) => value == null || value.isEmpty ? 'Enter password' : null,
+                  validator: (value) =>
+                      value == null || value.isEmpty ? 'Enter password' : null,
                 ),
                 const SizedBox(height: 24),
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () => state.canSubmitLogin ? _performLogin(context) : null,
+                    onPressed: () =>
+                        state.canSubmitLogin ? _performLogin(context) : null,
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white70,
                       padding: const EdgeInsets.symmetric(vertical: 16),
@@ -130,7 +134,8 @@ class _LoginFormState extends State<LoginForm> with SingleTickerProviderStateMix
 
   Widget _elevatedButtonChildBuilder(AuthState state) {
     if (state.canSubmitLogin) {
-      return const Text('Login', style: TextStyle(fontSize: 16, color: Colors.green));
+      return const Text('Login',
+          style: TextStyle(fontSize: 16, color: Colors.green));
     }
     return LottieLoader.login(
       controller: _controller,
